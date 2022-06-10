@@ -34,12 +34,10 @@ router.post('/regcar', (req, res) => {
     //Handling errors
     const errors = req.validationErrors()
     if (errors) {
-        //in case of an error, remain on signup
         res.render('regcar')
     }
     else {
         let newRegcar = new Regcar({
-            //property(as used in the schema): value(as used in the form as the name of the input type)
             vehicletype: vehicletype,
             drivername : drivername,
             numberplate : numberplate,
@@ -59,7 +57,6 @@ router.post('/regcar', (req, res) => {
                 return;
             }
             else {
-                //since this is a register page, it should redirect you to the login page
                 req.flash('success', 'You have successfully registered the car')
                 console.log('You have saved your data to the database')
                 res.redirect('/cartable')
@@ -71,5 +68,4 @@ router.post('/regcar', (req, res) => {
 
 });
 
-//exposing the route to any file that will need to access it
 module.exports = router;

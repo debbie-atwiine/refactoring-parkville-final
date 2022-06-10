@@ -2,16 +2,12 @@
 
 const LocalStrategy = require('passport-local').Strategy;
 const Signup = require('../models/signupModel');
-const config = require('../config/database');
 const bcrypt = require('bcryptjs');
 
 module.exports = (passport) => {
     
-    //The fields used here should correspond to the way they are written in the schema(models)
     passport.use(new LocalStrategy(function(username, password, done){
-      // match username
       let query = { username: username };
-      //we pass an error and the name of our model (to cater for both possibilities)
       Signup.findOne(query, function(err, user){
         if(err) throw err;
   
@@ -20,7 +16,7 @@ module.exports = (passport) => {
           return done(null, false, { message: 'No user found' });
           
         }
-        // Match password
+        // Matching the password
       bcrypt.compare(password, user.password, function(err, isMatch){
         if (err) throw err;
         if(isMatch) {

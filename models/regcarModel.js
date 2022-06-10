@@ -11,7 +11,6 @@ const regcarSchema = mongoose.Schema({
  drivername:{
      type:String,
      required:true
-// the data that is coming in, its a string and required
  },
  numberplate:{
      type:String,
@@ -50,5 +49,4 @@ parkingmode:{
 
 })
 
-// we are exposing our schema to other files
 const Regcar = module.exports = mongoose.model('Regcar', regcarSchema);

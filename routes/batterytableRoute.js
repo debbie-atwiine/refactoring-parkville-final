@@ -5,7 +5,6 @@ const Batteryreg = require('../models/batteryregModel');
 router.get('/batterytable', async(req,res)=>{
      
     try {
-        // helps return all the members in the collection clients
         const data = await Batteryreg.find({}).sort({$natural:-1});
             res.render('batterytable', {
             batteryregs : data

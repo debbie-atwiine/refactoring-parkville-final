@@ -10,7 +10,6 @@ require('dotenv').config()
 //requiring the database
 const config = require('./config/database');
 
-
 //requiring routes
 const signup = require('./routes/signupRoute');
 const login = require('./routes/loginRoute');

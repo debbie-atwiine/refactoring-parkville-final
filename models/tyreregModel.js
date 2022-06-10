@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-//creating the schema
 const tyreregSchema = mongoose.Schema({
 
  model: {

@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Car Reg Table
+    button.btn.btn-outline-success.logout-button(type='submit' onclick="window.print()" style='margin-right:200px; border-color:#222d41;') Print Report
+    button.btn.btn-danger-outline-success
+      a.nav-link(href='/login') LOGOUT
+    link(rel="stylesheet", href="./debbie.css")
+    link(rel="stylesheet", href="./bootstrap/css/bootstrap.min.css")
+  body.bstyle
+    h3.heading-text CAR REG TABLE
+      table.table
+        thead
+          tr
+            th(scope="col") Vehicle Type
+            th(scope="col") Name of Driver
+            th(scope="col") Number Plate
+            th(scope="col") Time of Arrival
+            th(scope="col") Model
+            th(scope="col") Date
+            th(scope="col") Phone No.
+            th(scope="col") Parking Mode
+        tbody
+          if regcars.length
+          each regcar in regcars
+           tr
+            td(scope="col") #{regcar.vehicletype}
+            td(scope="col") #{regcar.drivername}
+            td(scope="col") #{regcar.numberplate}
+            td(scope="col") #{regcar.time}
+            td(scope="col") #{regcar.carmodel}
+            td(scope="col") #{regcar.date}
+            td(scope="col") #{regcar.phonenumber}
+            td(scope="col") #{regcar.parkingmode}
+
+
+

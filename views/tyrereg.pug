@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Reg tyre
+    link(rel="stylesheet", href='/debbie.css')
+    link(rel="stylesheet", href='/bootstrap/css/bootstrap.min.css')
+    button.btn.btn-danger-outline-success
+      a.nav-link(href='/login') LOGOUT
+  body.bstyle
+    // <body style="background-color:rgba(250, 246, 249, 0.904);">
+    form.container-fluid(method="post", action="/tyrereg")
+      .row
+        .col-3
+        .col-7
+          h3 CAR TYRE CLINIC
+          .form-group
+            label.col-sm-3.control-label(for="model")
+              b Car Models
+            .col-sm-9
+              select.form-control(name="model", autofocus)
+                option(value="Default", selected="") Select your car model
+                option(value="jeep") Jeep
+                option(value="benz") Mercedes Benz
+                option(value="rover") Range Rover
+                option(value="subaru") Subaru
+                option(value="mitsubishi") Mitsubishi
+                option(value="corona") Corona
+                option(value="hilux") Hilux
+                option(value="other") Other
+          .form-group
+            label.col-sm-3.control-label(for="tyreprice")
+              b Car Tyre Prices (Available)
+            .col-sm-9
+              select.form-control(name="tyreprice", autofocus)
+                option(value="Default", selected="") Select your most preferred tyre make
+                option(value="michelinSmall") MICHELIN (size: small) @ UGX 100,000
+                option(value="michelinMedium") MICHELIN (size: medium) @ UGX 200,000
+                option(value="pirelliMedium") PIRELLI (size: medium) @ UGX 150,000
+                option(value="hankookSmall") HANKOOK (size: small) @ UGX 200,000
+                option(value="hankookMedium") HANKOOK (size: medium) @ UGX 350,000
+                option(value="hankookLarge") HANKOOK (size: large) @ UGX 500,000
+                option(value="yokohamaMedium") YOKOHAMA (size: medium) @ UGX 400,000
+                option(value="yokohamaLarge") YOKOHAMA (size: large) @ UGX 700,000
+          .form-group
+            label.col-sm-3.control-label(for="tyreservice")
+              b Car Tyre Services Offered
+            .col-sm-9
+              select.form-control(name="tyreservice", autofocus)
+                option(value="Default", selected="") Select tyre service
+                option(value="tyrePressure") Tyre Pressure @ UGX 500
+                option(value="punctureFixing") Puncture Fixing @ UGX 5,000
+                option(value="tyreValves") Tyre Valves @ UGX 5,000
+          button.btn.btn-primary(type="submit") Submit
+        .col-2
+    script(src='/bootstrap/js/bootstrap.min.js')

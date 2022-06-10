@@ -1,0 +1,28 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='./debbie.css')
+  link(rel='stylesheet' href='./bootstrap/css/bootstrap.min.css')
+  title Parkville - Login
+.container-fluid
+  .row
+    .col-lg-8.col-md-8.col-sm-2.pl-0.pr-0
+      section.bg-image-auth
+    .col-lg-4.col-md-4.col-sm-2
+      main.auth-form
+        h1.heading-text WELCOME TO PARKVILLE LTD
+        h3 LOGIN HERE
+        form(action='/login' method='POST')
+          .mb-3
+            label.form-label Username
+            input.form-control(type='text' name='username' placeholder='Enter your Username' required='')
+          .mb-3
+            label.form-label Password
+            input.form-control(type='password' name='password' placeholder='Please enter you password' required='')
+          button.btn.btn-primary.col-lg-4(type='submit') Sumbit
+          br
+          a.col-lg-4(href='/signup') Have no account, Click on this link to Register
+script(src='./bootstrap/js/bootstrap.min.js') 

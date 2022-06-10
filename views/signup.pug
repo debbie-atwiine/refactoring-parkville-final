@@ -1,0 +1,40 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='/debbie.css')
+  link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
+  title Parkville - SignUp
+.container-fluid
+  .row
+    .col-lg-8.col-md-8.col-sm-2.pl-0.pr-0
+      section.bg-image-auth
+    .col-lg-4.col-md-4.col-sm-2
+      main.auth-form
+        h1.heading-text WELCOME TO PARKVILLE LTD
+        h3 REGISTER HERE
+        form(action = '/signup' method = 'POST' onsubmit='return validatedForm()')
+          .mb-3
+            label.form-label(for='userName') Username
+            input#userName.form-control(type='text' name='username')
+            span#userNameError
+          .mb-3
+            label.form-label(for='email') Email address
+            input#email.form-control(type='email' name='email')
+            span#emailError
+          .mb-3
+            label.form-label(for='password1') Password
+            input#password1.form-control(type='password' name='password')
+            span#password1Error
+          .mb-3
+            label.form-label(for='password2') Confirm Password
+            input#password2.form-control(type='password' name='passwordConfirm')
+            span#password2Error
+          div
+          
+          button.btn.btn-primary.col-lg-4(type='submit') SUBMIT        
+script(src='/bootstrap/js/bootstrap.min.js')
+script(src='/js/signupval.js')
+

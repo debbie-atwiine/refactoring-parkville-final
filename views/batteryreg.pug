@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Battery Registration
+    link(rel="stylesheet", href="/debbie.css")
+    link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+    button.btn.btn-danger-outline-success
+      a.nav-link(href='/login') LOGOUT
+  body.bstyle
+    // <body style="background-color:rgba(250, 246, 249, 0.904);">
+    form.container-fluid(method="post", action="/batteryreg")
+      .row
+        .col-3
+        .col-7
+          h3 BATTERY SECTION
+          .form-group
+            label.col-sm-3.control-label(for="batterytype")
+              b Battery Type
+            .col-sm-9
+              select.form-control(name="batterytype", autofocus)
+                option(value="Default", selected="") Select your preferred battery type 
+                  em (U might need guidance on this one)
+                option(value="FLAB") Flooded Lead Acid Battery
+                option(value="SCB") Silver Calcium Battery
+                option(value="EFB") Enhanced Flooded Battery (EFB)
+                option(value="AGM") Absorbent Glass Mat Battery (AGM)
+                option(value="DCB") Deep Cycle Battery
+                option(value="LI") Lithium Ion (Li-Ion) Battery
+          .form-group
+            label.col-sm-3.control-label(for="batterysize")
+              b Available Battery Sizes
+            .col-sm-9
+              select.form-control(name="batterysize", autofocus)
+                option(value="Default", selected="") Select battery size
+                option(value="24") 24 @ UGX 50,000
+                option(value="24F") 24F @ UGX 55,000
+                option(value="34") 34 @ UGX 70,000
+                option(value="35") 35 @ UGX 70,000
+                option(value="H6") H6 (48) @ UGX 74,000
+                option(value="H8") H8 (49) @ UGX 74,000
+                option(value="21R") 21R @ UGX 45,000
+                option(value="22HF") 22HF @ UGX 50,000
+                option(value="24H") 24H @ UGX 60,000
+                option(value="24T") 24T @ UGX 63,000
+                option(value="29NF") 29NF @ UGX 100,000
+                option(value="40R") 40R @ UGX 250,000
+                option(value="47") 47 @ UGX 300,000
+                option(value="75") 75 @ UGX 450,000
+                option(value="95R") 95R @ UGX 500,000
+                option(value="98R") 98R @ UGX 690,000
+                option(value="GC2") GC2 @ UGX 910,000
+                option(value="GC2H") GC2H @ UGX 990,000
+          button.btn.btn-primary(type="submit") Submit
+        .col-2
+    script(src='/bootstrap/js/bootstrap.min.js')

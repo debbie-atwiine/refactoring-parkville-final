@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Car Tyre Clinic Table
+    button.btn.btn-outline-success.logout-button(type='submit' onclick="window.print()" style='margin-right:200px; border-color:#222d41;') Print Report
+    button.btn.btn-danger-outline-success
+      a.nav-link(href='/login') LOGOUT
+    link(rel="stylesheet", href="./debbie.css")
+    link(rel="stylesheet", href="./bootstrap/css/bootstrap.min.css")
+  body.bstyle
+    h1.heading-text REGISTERED TYRES
+    form(action="/tyretable", method="post")
+      .row
+        .col-2
+        .col-8
+          table.table
+            thead
+              tr
+                th(scope="col") Car Model
+                th(scope="col") Tyre Specs
+                th(scope="col") Tyre Service
+            tbody 
+              if tyreregs.length
+              each tyrereg in tyreregs
+               tr
+                td(scope="col") #{tyrereg.model}
+                td(scope="col") #{tyrereg.tyreprice}
+                td(scope="col") #{tyrereg.tyreservice}
+
+        .col-2
+    script(src='/bootstrap/js/bootstrap.min.js')

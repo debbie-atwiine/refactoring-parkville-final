@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Car Parking
+    link(rel="stylesheet", href='./debbie.css')
+    link(rel="stylesheet", href='./bootstrap/css/bootstrap.min.css')
+    button.btn.btn-danger-outline-success
+      a.nav-link(href='/login') LOGOUT
+  body.bstyle
+    // <body style="background-color:rgba(250, 246, 249, 0.904);">
+    form.container-fluid(method="post" action="/regcar")
+      .row
+        .col-3
+        .col-7
+          h3 CAR REGISTRATION FORM
+          .form-group
+            label.col-sm-3.control-label(for="vehicletype")
+              b Vehicle Type
+            .col-sm-9
+              select.form-control(name="vehicletype", autofocus)
+                option(value="Default", selected='') Select Type of Vehicle
+                option(value="truck") Truck
+                option(value="PersonalCar") Personal Car
+                option(value="taxi") Taxi
+                option(value="coaster") Coaster
+                option(value="boda") Boda-Boda
+          .form-group
+            label.col-sm-3.control-label(for="nameofdriver")
+              b Name of Driver
+            .col-sm-9
+              input.form-control(type="text", name="drivername")
+          .form-group
+            label.col-sm-3.control-label(for="numberplate")
+              b Number Plate
+            .col-sm-9
+              input.form-control(type="text", name="numberplate")
+          .form-group
+            label.col-sm-3.control-label(for="color")
+              b Color
+            .col-sm-9
+              input.form-control(type="text", name="color")
+          .form-group
+            label.col-sm-3.control-label(for="time")
+              b Time of arrival
+            .col-sm-9
+              input.form-control(type="time", name="time")
+          .form-group
+            label.col-sm-3.control-label(for="model")
+              b Car Model
+            .col-sm-9
+              input.form-control(type="text", name="carmodel")
+          .form-group
+            label.col-sm-3.control-label(for="date")
+              b Date
+            .col-sm-9
+              input.form-control(type="date", name="date")
+          .form-group
+            label.col-sm-3.control-label(for="phonenumber")
+              b Phone Number
+            .col-sm-9
+              input.form-control(type="text", name="phonenumber")
+          .form-group
+            label.col-sm-3.control-label(for="parkingmode")
+              b Parking Mode
+            .col-sm-9
+              select.form-control(name="parkingmode", autofocus)
+                option(value="Default", selected="") Select Parking mode
+                option(value="day") Day
+                option(value="night") Night
+                option(value="lessthan3") Less than 3 hours
+
+          button.btn.btn-primary(type="submit") Submit
+        .col-2
+    script(src='/bootstrap/js/bootstrap.min.js')

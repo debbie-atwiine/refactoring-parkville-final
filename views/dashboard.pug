@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+  head
+    // Required meta tags
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    // Bootstrap CSS
+    link(href="/bootstrap/css/bootstrap.min.css")
+    title Dash
+  body(style="background-color:rgba(250, 246, 249, 0.904);")
+    h1
+      p.fw-bold Welcome to Parkville Car Services
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      .container-fluid
+        a.navbar-brand(href="#")
+          img(src="/images/logo.jpg", alt='logo image', width="150px", height="70px")
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          .navbar-nav
+            form.d-flex
+              a.navbar-brand(href="/login", style="float: right;")
+                img(src="/images/logout.jpg", alt='logout image', width="30px", height="30px")
+                | LOGOUT
+    .container
+      .row.g-3
+        .col-sm-12.col-md-6.col-lg-4
+          .card
+            img.card-img-top(src="/images/car.jpg", width="300px", height="300px", alt="Car Parking")
+            .card-body
+              h5.card-title Car Parking
+              a.card-link(href="/regcar") Click to register car
+        .col-sm-12.col-md-6.col-lg-4
+          .card
+            img.card-img-top(src="/images/battery.jpg", width="300px", height="300px", alt="Battery Section")
+            .card-body
+              h5.card-title Battery Section
+              a.card-link(href="/batteryreg") Click to register battery
+        .col-sm-12.col-md-6.col-lg-4
+          .card
+            img.card-img-top(src="/images/tyre.jpg", width="300px", height="300px", alt="Car Tyre Clinic")
+            .card-body
+              h5.card-title Car Tyre Clinic
+              a.card-link(href="/tyrereg") Click here for more
+    script(src='/bootstrap/js/bootstrap.min.js')
